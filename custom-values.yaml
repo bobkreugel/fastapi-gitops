@@ -1,0 +1,15 @@
+image:
+  repository: fastapi-gitops-starter
+  tag: "local"
+  pullPolicy: Never
+
+registry:
+  createImagePullSecret: false
+
+imagePullSecrets: []
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 10
